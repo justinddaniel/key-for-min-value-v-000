@@ -5,16 +5,16 @@ def key_for_min_value(name_hash)
   values = []
   values << name_hash.collect do |key, value|
     value
+  end
     values = values.each do |a, b|
-      if a == b 
+      if a == b
         0
-      elsif a < b 
+      elsif a < b
         -1
-      elsif a > b 
+      elsif a > b
         1
       end
     end
     values_least = values[0]
     name_hash.key(values_least)
   end
-  
