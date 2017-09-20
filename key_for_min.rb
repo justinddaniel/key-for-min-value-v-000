@@ -3,10 +3,10 @@
 
 def key_for_min_value(name_hash)
   values = []
-  values << name_hash.collect do |key, value|
-    value
+  name_hash.collect do |key, value|
+    values.push(value)
   end
-    values = values.each do |a, b|
+    values = values.sort do |a, b|
       if a == b
         0
       elsif a < b
